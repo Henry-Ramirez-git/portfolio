@@ -1,90 +1,211 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Henry Ramirez</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henry Ramirez — Freelancer &amp; Web Developer</title>
+
+    <!-- Google Fonts: Roboto Flex (variable, modern sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,50..150,100..1000&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav>
-      <div class="logo">henryramirez</div>
-      <ul class="nav-links">
-        <li><a href="#about">Über mich</a></li>
-        <li><a href="#projects">Projekte</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="animate-in">Design & Code</h1>
-      <p class="animate-in">Ich gestalte digitale Erlebnisse mit Leidenschaft.</p>
-      <a href="#projects" class="btn animate-in">Projekte ansehen</a>
-    </div>
-  </section>
+    <!-- ============================================================
+    SECTION 1: HERO — Light Theme (#EFEDE3)
+    ============================================================ -->
+    <header class="hero" id="hero">
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-image animate-in">
-        <img src="placeholder-about.jpg" alt="Portrait Platzhalter">
-      </div>
-      <div class="about-text animate-in">
-        <h2>Über mich</h2>
-        <p>Ich bin ein kreativer Kopf, der sich auf minimalistische und funktionale Interfaces spezialisiert hat. Mit jahrelanger Erfahrung in Webentwicklung und Design erschaffe ich Produkte, die begeistern.</p>
-      </div>
-    </div>
-  </section>
+        <!-- Primary Navigation -->
+        <nav class="nav-primary" id="navPrimary">
+            <div class="nav__left">
+                <span class="nav__copyright">© Henry Ramirez</span>
+            </div>
+            <div class="nav__right">
+                <a href="/work" class="nav__link">Work</a>
+                <a href="/about" class="nav__link">About</a>
+                <a href="/contact" class="nav__link">Contact</a>
+            </div>
+        </nav>
 
-  <!-- Projects -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="animate-in">Ausgewählte Projekte</h2>
-      <div class="project-grid">
-        <div class="project-card animate-in">
-          <img src="placeholder-project1.jpg" alt="Projekt 1">
-          <div class="project-info">
-            <h3>Projekt Eins</h3>
-            <p>Eine minimalistische Web-App.</p>
-          </div>
+        <!-- Floating burger button (hidden by default, shown on scroll via JS) -->
+        <!-- Heroicon: "bars-3" – three horizontal lines, but we style two lines in CSS to match denissnellenberg aesthetic -->
+        <button class="nav-burger" id="navBurger" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="8" x2="19" y2="8" />
+                <line x1="5" y1="16" x2="19" y2="16" />
+            </svg>
+        </button>
+
+        <!-- Hero inner layout -->
+        <div class="hero__inner">
+
+            <!-- Kinetic typography running line -->
+            <div class="hero__kinetic" id="kineticLine">
+                <span class="kinetic__text">Henry Ramirez —</span>
+            </div>
+
+            <!-- Hero content: portrait + floating info -->
+            <div class="hero__content">
+                <!-- Portrait (placeholder from Unsplash) -->
+                <div class="hero__portrait">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=face&auto=format" alt="Henry Ramirez portrait" width="400" height="500" loading="eager" />
+                </div>
+
+                <!-- Floating info block -->
+                <div class="hero__info">
+                    <span class="hero__info-tag">Freelancer &amp; Web Developer</span>
+                </div>
+            </div>
+
         </div>
-        <div class="project-card animate-in">
-          <img src="placeholder-project2.jpg" alt="Projekt 2">
-          <div class="project-info">
-            <h3>Projekt Zwei</h3>
-            <p>Interaktive Dashboard-Lösung.</p>
-          </div>
+    </header>
+
+
+    <!-- ============================================================
+    SECTION 2: ABOUT — Light Theme (#EFEDE3)
+    ============================================================ -->
+    <section class="about" id="about">
+
+        <div class="about__grid">
+            <!-- Left column: heading statement -->
+            <div class="about__col about__col--text">
+                <h2 class="about__heading">
+                    Helping brands to stand out in the digital era.<br />
+                    Together we will set the new status quo.<br />
+                    No nonsense, always on the cutting edge.
+                </h2>
+            </div>
+
+            <!-- Right column: circular CTA button -->
+            <div class="about__col about__col--cta">
+                <a href="/about" class="circle-cta" id="aboutCta">
+                    <span class="circle-cta__label">About</span>
+                    <svg class="circle-cta__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+            </div>
         </div>
-        <div class="project-card animate-in">
-          <img src="placeholder-project3.jpg" alt="Projekt 3">
-          <div class="project-info">
-            <h3>Projekt Drei</h3>
-            <p>E-Commerce mit Fokus auf UX.</p>
-          </div>
+
+        <!-- Interactive Coded Projects List -->
+        <div class="projects-list" id="projectsList">
+            <!-- Each project item: data-url for external link, data-thumb for preview image -->
+            <div class="project-item" data-url="https://twice.com" data-thumb="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=300&h=200&fit=crop&auto=format">
+                <div class="project-item__inner">
+                    <span class="project-item__title">TWICE</span>
+                    <span class="project-item__sep">—</span>
+                    <span class="project-item__desc">Interaction &amp; Development</span>
+                </div>
+                <div class="project-item__border"></div>
+            </div>
+
+            <div class="project-item" data-url="https://thedamai.com" data-thumb="https://images.unsplash.com/photo-1541888946425-d81bb0f8e7a0?w=300&h=200&fit=crop&auto=format">
+                <div class="project-item__inner">
+                    <span class="project-item__title">The Damai</span>
+                    <span class="project-item__sep">—</span>
+                    <span class="project-item__desc">Design &amp; Development</span>
+                </div>
+                <div class="project-item__border"></div>
+            </div>
+
+            <div class="project-item" data-url="https://example.com/studio" data-thumb="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=300&h=200&fit=crop&auto=format">
+                <div class="project-item__inner">
+                    <span class="project-item__title">Studio Alba</span>
+                    <span class="project-item__sep">—</span>
+                    <span class="project-item__desc">Full‑stack &amp; Motion</span>
+                </div>
+                <div class="project-item__border"></div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="animate-in">Kontakt</h2>
-      <p class="animate-in">Hast du ein Projekt im Kopf? Schreib mir!</p>
-      <a href="mailto:mail@dennissnellenberg.com" class="btn animate-in">henry.ramirez.koen@gmail.com</a>
-    </div>
-  </section>
+        <!-- Floating preview container (hidden by default) -->
+        <div class="floating-preview" id="floatingPreview">
+            <img class="floating-preview__img" src="" alt="project preview" />
+        </div>
 
-  <footer>
-    <p>&copy; 2026 henryramirez</p>
-  </footer>
+        <!-- Section footer: more work link -->
+        <div class="about__footer">
+            <a href="/work" class="more-work-link">more work <span class="more-work-arrow">↗</span></a>
+        </div>
 
-  <script src="app.js"></script>
+    </section>
+
+
+    <!-- ============================================================
+    SECTION 3: ANIMATED SHOWCASE GALLERY — Light Theme (#EFEDE3)
+    ============================================================ -->
+    <section class="gallery" id="gallery">
+
+        <div class="gallery__row gallery__row--left" id="galleryRow1">
+            <div class="gallery__track">
+                <!-- Duplicate images for seamless loop feel -->
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=280&h=200&fit=crop&auto=format" alt="showcase 1" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=280&h=200&fit=crop&auto=format" alt="showcase 2" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=280&h=200&fit=crop&auto=format" alt="showcase 3" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=280&h=200&fit=crop&auto=format" alt="showcase 4" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=280&h=200&fit=crop&auto=format" alt="showcase 1 dup" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=280&h=200&fit=crop&auto=format" alt="showcase 2 dup" width="280" height="200" loading="lazy" />
+            </div>
+        </div>
+
+        <div class="gallery__row gallery__row--right" id="galleryRow2">
+            <div class="gallery__track">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=280&h=200&fit=crop&auto=format" alt="showcase 5" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=280&h=200&fit=crop&auto=format" alt="showcase 6" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=280&h=200&fit=crop&auto=format" alt="showcase 7" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=280&h=200&fit=crop&auto=format" alt="showcase 8" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=280&h=200&fit=crop&auto=format" alt="showcase 5 dup" width="280" height="200" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=280&h=200&fit=crop&auto=format" alt="showcase 6 dup" width="280" height="200" loading="lazy" />
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================================
+    SECTION 4: CONTACT FOOTER — Dark Theme (#302F2C)
+    ============================================================ -->
+    <footer class="contact-footer" id="contact">
+
+        <!-- Main CTA area -->
+        <div class="contact__main">
+            <h2 class="contact__heading">Let's build together</h2>
+            <a href="/contact" class="circle-cta circle-cta--light" id="contactCta">
+                <span class="circle-cta__label">Get in touch</span>
+                <svg class="circle-cta__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Contact info badges -->
+        <div class="contact__badges">
+            <a href="mailto:info@henryramirez.com" class="badge-pill">info@henryramirez.com</a>
+            <span class="badge-pill">+1 (212) 555‑0182</span>
+        </div>
+
+        <!-- Absolute bottom footer -->
+        <div class="contact__bottom">
+            <span class="bottom__left">VERSION 2026 © Edition</span>
+            <span class="bottom__center" id="localTime">LOCAL TIME 10:23 AM EST</span>
+            <div class="bottom__right">
+                <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://linktr.ee" class="social-link" target="_blank" rel="noopener">Linktree</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
 </body>
 </html>
